@@ -1,0 +1,72 @@
+.header {
+    padding: 70px 0px 38px 0px;
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    background: url("@img/header__background.jpg") 50% 50%/cover no-repeat;
+    @include tablet-min {
+        padding: 40px 0px 20px 0px;
+    }
+    &__logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__logo-icon{
+        width: 100%;
+        max-width: 182px;
+        height: auto;
+    }
+    &__content{
+        margin-top: 140px;
+        color: $second-color;
+        @include tablet-min {
+            margin-top: 100px;
+        }
+    }
+    &__suptitle{
+        font-size: 18px;
+        line-height: 1.2;
+    }
+    &__title{
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 77px;
+        @include phone {
+            font-size: 32px;
+            line-height: 1.2;
+        }
+        small{
+            font-size: 42px;
+            @include phone {
+                font-size: 20px;
+            }
+        }
+    }
+    &__button{
+        margin-top: 109px;
+        font-size: 18px;
+    }
+    &__social{
+        position: absolute;
+        bottom: 38px;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 167px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 10px;
+    }
+    &__social-icons{
+        width: 100%;
+        max-width: 30px;
+        height: auto;
+        transition: opacity .2s ease-in;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
