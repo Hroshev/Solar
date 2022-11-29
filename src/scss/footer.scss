@@ -196,8 +196,19 @@
             transform: rotate(-45deg);
         }
     }
-    &__title {}
-    &__text {}
+    &__title {
+        margin-bottom: 12px;
+        font-size: 22px;
+        color: #000;
+        text-transform: uppercase;
+    }
+    &__text {
+        font-size: 18px;
+        color: $first-color;
+        &:not(:last-child){
+            margin-bottom: 8px;
+        }
+    }
     &.open {
         opacity: 1;
         visibility: visible;

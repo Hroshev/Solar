@@ -1,5 +1,6 @@
 import "./modules/regularExpressions.js";
 import "./modules/popup.js";
+import "./modules/swiper.js";
 // import "./modules/burger.js";
 // import "./modules/swiper.js";
 // import "./modules/ScrollTo.js";
