@@ -76,11 +76,119 @@
     &__inner{
         display: flex;
         justify-content: space-between;
-        gap: 20px;
+        gap: 50px;
+        @include tablet-min{
+            flex-direction: column;
+        }
+    }
+    &__wrrap{
+        width: 100%;
+        min-width: 400px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        @include tablet-min{
+            min-width: auto;
+        }
+    }
+    &__sidebar{
+        margin-bottom: 100px;
+        @include  tablet-min {
+            margin-bottom: 50px;
+        }
+    }
+    &__sidebar-list{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        @include  phone {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__sidebar-link{
+        position: relative;
+        font-size: 18px;
+        color: $first-color;
+        transition: opacity .2s ease-in;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+    &__sidebar--active{
+        &::after{
+            position: absolute;
+            content: "";
+            margin-top: 5px;
+            width: 100%;
+            left: 0;
+            height: 1px;
+            background-color: $first-color;
+            top: 100%;
+        }
+    }
+    &__sidebar__wrrapper{
+        margin-top: 120px;
+        @include  tablet-min {
+            margin-top: 60px;
+        }
+    }
+    &__sidebar-installation{
+        display: none;
+    }
+    &__sidebar-restrictions{
+        display: none;
+    }
+    &__sidebar-inner{
+        display: flex;
+        column-gap: 40px;
+        @include phone{
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    &__sidebar-sale__image{
+        width: 100%;
+        max-width: 235px;
+        height: auto;
+    }
+    &__sidebar-sale__text{
+        width: 100%;
+        max-width: 235px;
+        line-height: 1.2;
+        @include phone{
+            max-width: none;
+        }
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 16px;
+        column-gap: 40px;
+        @include phone{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            gap: 20px;
+        }
+    }
+    &__list-box{
+        width: 100%;
+        max-width: 235px;
+        @include phone{
+            max-width: none;
+        }
+    }
+    &__item-title{
+        margin-bottom: 5px;
     }
     &__content{
         width: 100%;
         max-width: 600px;
+        @include tablet-min{
+            max-width: none;
+        }
     }
     &__content-title{
         margin-bottom: 17px;
